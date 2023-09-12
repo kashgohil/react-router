@@ -6,6 +6,14 @@ copy-paste code from here directly to use it
 
 There are 3 different hooks
 
+### Note:
+
+a big oversight from me
+
+I did not account for the reload when url changes (either through `anchor` tags or through browser APIs). Need to make this work.
+
+Basic solution would be to expose a utility to push routes in the browser history and using it everywhere and expose a `Link` component to use instead of `anchor` tag
+
 ## useRouter
 
 This hook will take map of `{ [path]: Compnoent }` as argument, and it will return the memoized component based on the current route/URL
